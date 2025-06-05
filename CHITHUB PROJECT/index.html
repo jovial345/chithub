@@ -1,20 +1,30 @@
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f0f0f0;
-}
-#messages {
-  border: 1px solid #ccc;
-  background: #fff;
-  height: 300px;
-  overflow-y: scroll;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-.message {
-  margin: 5px 0;
-}
-button {
-  padding: 10px;
-  font-size: 16px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chithub - Chat App</title>
+    <link rel="stylesheet" href="public/css/style.css"> <!-- Link to your CSS file -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="screen">
+        <h1>Welcome to Chithub</h1>
+        <button id="googleSignInBtn">Sign in with Google</button>
+    </div>
+
+    <!-- Chat Screen -->
+    <div id="chatScreen" class="screen" style="display:none;">
+        <h1>Chat</h1>
+        <div id="messages"></div>
+        <textarea id="messageInput" placeholder="Type a message..."></textarea>
+        <button id="sendBtn">Send</button>
+    </div>
+
+    <!-- JavaScript file for Firebase logic -->
+    <script src="public/js/app.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
